@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="header.css">
+</head>
+
+<body>
+    <div id="header"> 
+        <div id="logo">
+            <h1>Tickethack</h1>
+        </div>
+        <div id="links">
+            <div id="cart-link">
+                <a href="./myCart.html">Cart</a>
+            </div>
+            <div id="bookings-link">
+                <a href="./bookings.html">Bookings</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="body-container">
+    <!--    <div id="empty-cart-container">
+            <div id="cart-message">
+                <h4>No trip in your cart.</h4></br>
+                <h4>Why not plan a trip ?</h4>
+            </div>
+        </div> -->
+
+        <div id="full-cart-container">
+
+            <div id="cart">
+                <p id="cart-title">My cart</p>
+                </br>
+                <div id="cart-trip">
+                    <p>Trip</p>
+                    </br>
+                    <p>Time</p>
+                    </br>
+                    <p>Price</p>
+                    </br>
+                    <button id="delete-btn">X</button>
+                </div>
+            </div>
+
+            <div id="purchase-section">
+                <div id="total-cart">
+                    <span>Total : <span id="total"></span></span>
+                </div>
+                <button id="purchase-btn">Purchase</button>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="cart.js"></script>
+
+</body>
+
+</html>
