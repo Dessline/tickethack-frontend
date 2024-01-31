@@ -1,6 +1,4 @@
 document.querySelector("#search-btn").addEventListener("click", () => getTravels())
-document.querySelectorAll("#book-btn").addEventListener("click", () => bookTravel())
-
 
 function getTravels() {
     let departure = document.querySelector("#search-departure").value
@@ -25,9 +23,8 @@ function getTravels() {
             for (let i = 0 ; i < data.travels.length; i ++) {
                 let hour = new Date(data.travels[i].date).getHours()
                 let min = new Date(data.travels[i].date).getMinutes()
-                //let time = moment(date).format("LT")
                 document.querySelector("#right").innerHTML += `
-                <div class="trip">
+                <div class="trip" id=${data.travels[i]._id}>
                 <div class="trip-text">
                     <div class="departure">${data.travels[i].departure}</div><span>-</span><div class="arrival">${data.travels[i].arrival}</div>
                 </div>
@@ -38,9 +35,22 @@ function getTravels() {
                 `
             }
         }
+    bookTravel()
     })
 }
 
 function bookTravel() {
-    
-}
+    for (let i = 0 ; i < document.querySelectorAll(".book-btn").length ; i ++) {
+        document.querySelectorAll(".book-btn")[i].addEventListener("click", () => {
+            let travel = document.querySelectorAll(".trip")[i].id
+            fetch("http://localhost:3000/carts/", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ travel }),
+            })
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .then(window.location.assign("http://127.0.0.1:5501/tickethack-frontend/myCart.html"));
+        });
+    };
+};
