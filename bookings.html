@@ -4,12 +4,12 @@
     <title>My bookings</title>
     <link rel="stylesheet" href="bookings.css">
     <link rel="stylesheet" href="header.css">
+    <script src="./node_modules/moment/moment.js"></script>
 </head>
-
 <body>
     <div id="header"> 
         <div id="logo">
-            <h1>Tickethack</h1>
+            <h1><a href="./index.html">Tickethack</a></h1>
         </div>
         <div id="links">
             <div id="cart-link">
@@ -21,26 +21,13 @@
         </div>
     </div>
     <div id="body-container">
-        <div id="full-bookings-container">
-            <div id="bookings">
-                <p id="bookings-title">My bookings</p>
-                </br>
-                <div id="bookings-trip">
-                    <p>Trip</p>
-                    </br>
-                    <p>Time</p>
-                    </br>
-                    <p>Price</p>
-                    </br>
-                    <p>Departure in</p>
-                </div>
+        <div id="empty-bookings-container">
+            <div id="bookings-message">
+                <h4>No booking yet.</h4></br>
+                <h4>Why not plan a trip ?</h4>
             </div>
-            <div id="enjoy-section">
-                <span id="enjoy">Enjoy your travel with Tickethack!</span>
-            </div>            
-        </div>
+        </div> 
     </div>
     <script src="bookings.js"></script>
 </body>
-
 </html>
