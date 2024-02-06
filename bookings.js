@@ -22,7 +22,7 @@ function getBookings () {
             var dureeRestante = moment.duration(difference)
             var time = dureeRestante.hours()
             if (time < 0) {
-                time = "Oups"
+                time = "oups..."
             }
             //let time = moment(data.bookings[i].travel.date).fromNow();   
             document.querySelector("#bookings-trip").innerHTML += `

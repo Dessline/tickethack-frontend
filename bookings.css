@@ -8,6 +8,8 @@ body {
 }
 
 #body-container {
+    background-image: url("./images/background.jpg");
+    background-size: cover;
     background-color: grey;
     background-size: cover;
     height: 92%;
@@ -24,6 +26,7 @@ body {
     justify-content: center;
 	align-items: center;
     flex-direction: column;
+    border-radius: 8px;
 }
 
 #bookings-message {
@@ -92,5 +95,5 @@ body {
 }
 
 #enjoy {
-    color: green;
+    color: #4ebe58;
 }

@@ -65,9 +65,12 @@ body {
     background-color: #4ebe58;
 }
 
+.overflow {
+    overflow-y: scroll;
+}
+
 #right {
     justify-content: space-evenly;
-    overflow-y: scroll;
 }
 
 .trip {
